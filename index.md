@@ -28,7 +28,7 @@ Nowadays, people are aware of the importance and involvement of Nonprofits. But 
 
 > Help us! Let's build a new solution to give to the charities that matter to us 🙌
 
-## Our Solution 🚀🚀
+## Our Solution 🚀✨
 
 - **Centralization:** Centralize NPOs
 - **Trust:** Each NPO is verified
