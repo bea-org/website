@@ -1,0 +1,11 @@
+{
+  "name": "@bea-org/website",
+  "private": true,
+  "version": "1.0.0",
+  "repository": "https://github.com/bea-org/website.git",
+  "author": "Damien Mortini",
+  "license": "MIT",
+  "scripts": {
+    "start": "bundle exec jekyll serve"
+  }
+}
