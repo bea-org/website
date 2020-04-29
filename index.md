@@ -9,14 +9,14 @@ layout: default
 
 ## Our Vision 👀
 
-We believe in people and in a more balanced world!
+We believe in people and in a more balanced world!\
 Let's allow the ones that can help to easily do so!
 
 ## Our Mission 👩‍🚀👨‍🚀
 
 Create a platform that simplifies drastically donation by giving users full control about how much they give, to whom and when.
 
-## The problem 🕸
+## The problem 😶
 
 Nowadays, people are aware of the importance and involvement of Nonprofits. But knowing how to help is still an issue. 
 
@@ -28,12 +28,12 @@ Nowadays, people are aware of the importance and involvement of Nonprofits. But 
 
 > Help us! Let's build a new solution to give to the charities that matter to us 🙌
 
-## Our Solution 🚀
+## Our Solution 🚀🚀
 
 - **Centralization:** Centralize NPOs
 - **Trust:** Each NPO is verified
 - **Discovery:** Facilitate NPOs discovery from user's interests and location
-- **Control:** Let user keep full control of how much they give, to whom and when (no subscriptions)
+- **Control:** Let users keep full control of how much they give, to whom and when (no subscriptions)
 
 ## Want to know more? 💡
 
