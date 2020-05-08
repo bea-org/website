@@ -9,7 +9,7 @@ layout: default
 
 ## Our Vision 👀
 
-We believe in people and in a more balanced world!\
+We believe in people and in a more balanced world!  
 Let's allow the ones that can help to easily do so!
 
 ## Our Mission 👩‍🚀👨‍🚀
