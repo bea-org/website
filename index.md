@@ -24,10 +24,15 @@ We make sure your money goes in the hands you hand-picked!
 
 ### Innovative nonprofits lists
 
-Create and share your non-profits list, we all heard about catastrophic events that involves the help of dozens of nonprofits, now it will be easier than ever to find them and give to the ones that matter to you!
+Create and share your non-profits list, we all heard about catastrophic events that involves the help of dozens of nonprofits.  
+Now it will be easier than ever to find them and give to the ones that matter to you!
+
+---
 
 > We believe in people and in a more balanced world!  
 Let’s allow the ones that can help to easily do so!
+
+---
 
 ### If you want to help us or just know more?
 
