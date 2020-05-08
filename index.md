@@ -5,9 +5,9 @@ layout: default
 
 # 🌍 Béa
 
-## The open source platform making donation effortless
+## The open source platform making donation effortless 🚀
 
-*Béa* is a community effort to build the next state-of-the-art donation tool 🚀
+*Béa* is a community effort to build the next state-of-the-art donation tool.
 
 ### Extremely simple 😉
 
@@ -18,7 +18,7 @@ We want to make your giving experience simpler but also on the go, generosity ca
 Choose at any moment how much you give, to whom and when, no subscription, no obligations.  
 Only the freedom of making a difference.
 
-### Trust 😎
+### Trust 🤝
 
 We make sure your money goes in the hands you hand-picked!
 
