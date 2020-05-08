@@ -11,7 +11,7 @@ layout: default
 
 ### Extremely simple 😉
 
-We want to make your giving experience simpler but also on the go, generosity can hit anytime :)
+We want to make your giving experience simpler but also on the go, generosity can hit anytime!
 
 ### Control is yours 🔒
 
