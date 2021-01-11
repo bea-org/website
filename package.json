@@ -1,11 +1,24 @@
 {
-  "name": "@bea-org/website",
+  "name": "@damienmortini/starter",
+  "version": "0.0.0",
   "private": true,
-  "version": "1.0.0",
-  "repository": "https://github.com/bea-org/website.git",
-  "author": "Damien Mortini",
-  "license": "MIT",
+  "description": "Web starter",
   "scripts": {
-    "start": "bundle exec jekyll serve"
+    "start": "server",
+    "test": "eslint packages",
+    "update": "yarn",
+    "upgrade": "yarn install && yarn upgrade-interactive --latest"
+  },
+  "author": "Damien Mortini",
+  "workspaces": [
+    "packages/*",
+    "../library/packages/**/*",
+    "../../@damienmortini/lib/packages/**/*"
+  ],
+  "devDependencies": {
+    "@damienmortini/server": "^1.0.31",
+    "eslint": "^7.17.0",
+    "eslint-config-google": "^0.14.0",
+    "yarn": "^1.22.10"
   }
 }
