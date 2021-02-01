@@ -1,0 +1,8 @@
+{
+  "name": "@bea-org/bea-website-button",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "@damienmortini/element-glslcanvas": "^0.0.1"
+  }
+}

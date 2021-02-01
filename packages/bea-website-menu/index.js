@@ -1,5 +1,5 @@
-import '../a/index.js';
-import '../logo/index.js';
+import '../bea-a/index.js';
+import '../bea-logo/index.js';
 
 /**
  * Entry point element

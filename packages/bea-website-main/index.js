@@ -1,4 +1,5 @@
-import '../website-menu/index.js';
+import '../bea-website-menu/index.js';
+import '../bea-website-home/index.js';
 
 /**
  * Entry point element
@@ -15,7 +16,7 @@ window.customElements.define('bea-website-main', class extends HTMLElement {
     display: block;
     position: relative;
     contain: content;
-    font-family: sans-serif;
+    font-family: 'Mulish', sans-serif;
   }
 
   bea-website-menu {
@@ -25,14 +26,11 @@ window.customElements.define('bea-website-main', class extends HTMLElement {
     z-index: 1;
   }
 
-  #bubble {
-    position: absolute;
-    right: 0;
+  bea-website-home {
+    height: 100vh;
   }
 </style>
 <bea-website-menu></bea-website-menu>
-<svg id="bubble" width="839" height="800" viewBox="0 0 839 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="725" cy="394" r="725" fill="#C9DAFF" />
-</svg>`;
+<bea-website-home></bea-website-home>`;
   }
 });
