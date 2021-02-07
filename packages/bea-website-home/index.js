@@ -53,6 +53,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     position: absolute;
     bottom: 40px;
     left: 50%;
+    padding: 30px 60px;
     transform: translateX(-50%);
   }
 
@@ -71,6 +72,6 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
 <div id="right">
   <img id="phone" src="node_modules/@bea-org/bea-website-home/phone.svg">
 </div>
-<bea-website-button></bea-website-button>`;
+<bea-website-button>Reste informé !</bea-website-button>`;
   }
 });

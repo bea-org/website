@@ -17,6 +17,7 @@ window.customElements.define('bea-website-main', class extends HTMLElement {
     position: relative;
     contain: content;
     font-family: 'Mulish', sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   bea-website-menu {
