@@ -116,10 +116,8 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
     };
 
     let canvasBoundingClientRect;
-    const resizeObserver = new ResizeObserver((entries) => {
-      canvasBoundingClientRect = this._glslCanvas.getBoundingClientRect();
-    });
-    resizeObserver.observe(this);
+    new ResizeObserver(() => canvasBoundingClientRect = this._glslCanvas.getBoundingClientRect()).observe(this);
+    window.addEventListener('resize', () => canvasBoundingClientRect = this._glslCanvas.getBoundingClientRect());
 
     this.addEventListener('pointerenter', (event) => {
       animate(this, {
