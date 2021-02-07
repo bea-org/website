@@ -53,7 +53,6 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     position: absolute;
     bottom: 40px;
     left: 50%;
-    padding: 30px 60px;
     transform: translateX(-50%);
   }
 

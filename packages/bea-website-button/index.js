@@ -104,7 +104,7 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
           vec2 q = abs(boxPosition) - size + borderRadius.x;
           float df = min(max(q.x, q.y), 0.0) + length(max(q, 0.0)) - borderRadius.x;
           df -= pointerDistance * .3;
-          df -= cos((1. - pointerHover) * (1. - pointerDistance) * 8.) * (1. - pointerHover) * .1;
+          df -= cos((1. - pointerHover) * (1. - pointerDistance) * 10.) * (1. - pointerHover) * .1 * smoothstep(0., .1, pointerHover);
 
           float aa = 1. / min(glslCanvasSize.x, glslCanvasSize.y) * 2.;
           float opacity = 1. - smoothstep(-aa, 0., df);
