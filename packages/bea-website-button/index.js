@@ -103,8 +103,8 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
           borderRadius.x = (boxPosition.y > 0.0) ? borderRadius.x : borderRadius.y;
           vec2 q = abs(boxPosition) - size + borderRadius.x;
           float df = min(max(q.x, q.y), 0.0) + length(max(q, 0.0)) - borderRadius.x;
-          df -= pointerDistance * .3;
-          df -= cos((1. - pointerHover) * (1. - pointerDistance) * 10.) * (1. - pointerHover) * .1 * smoothstep(0., .1, pointerHover);
+          df -= pointerDistance * .2;
+          df -= cos((1. - pointerHover) * (1. - pointerDistance) * 8.) * (1. - pointerHover) * .1 * smoothstep(0., .1, pointerHover);
 
           float aa = 1. / min(glslCanvasSize.x, glslCanvasSize.y) * 2.;
           float opacity = 1. - smoothstep(-aa, 0., df);
@@ -119,12 +119,18 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
     new ResizeObserver(() => canvasBoundingClientRect = this._glslCanvas.getBoundingClientRect()).observe(this);
     window.addEventListener('resize', () => canvasBoundingClientRect = this._glslCanvas.getBoundingClientRect());
 
+    this._pointerHovering = false;
     this.addEventListener('pointerenter', (event) => {
+      this._pointerHovering = true;
       animate(this, {
         _pointerHover: 1,
       }, {
         duration: 500,
       });
+    });
+
+    this.addEventListener('pointerleave', (event) => {
+      this._pointerHovering = false;
     });
 
     window.addEventListener('pointermove', (event) => {
@@ -135,7 +141,7 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
   }
 
   update() {
-    if (Math.abs(this._pointerPosition.x) > 1 || Math.abs(this._pointerPosition.y) > 1) this._pointerHover += -this._pointerHover * .2;
+    if (!this._pointerHovering) this._pointerHover += -this._pointerHover * .2;
     this._pointerPositionEased.lerp(this._pointerPosition, .2);
     this._glslCanvas.draw({
       uniforms: {

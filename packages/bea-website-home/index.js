@@ -16,6 +16,8 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     display: grid;
     position: relative;
     grid-template-columns: 1fr 1fr;
+    line-height: 1;
+    font-family: Pangram;
   }
 
   bea-website-backgroundcircle {
@@ -49,6 +51,36 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     animation-direction: alternate;
   }
 
+  #left {
+    color: var(--color-blue);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+
+  #text {
+    font-weight: 700;
+    font-size: 96px;
+    white-space: nowrap;
+  }
+
+  #text span:nth-of-type(2), #text span:nth-of-type(3) {
+    display: block;
+  }
+
+  #text span:nth-of-type(2), #text span:nth-of-type(4) {
+    color: var(--color-darkblue);
+  }
+
+  #text span:nth-of-type(3) {
+    color: var(--color-green);
+  }
+
+  #text span:nth-of-type(5) {
+    display: inline;
+    color: var(--color-blue);
+  }
+
   bea-website-button {
     position: absolute;
     bottom: 40px;
@@ -58,19 +90,26 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
 
   @keyframes float {
     0% {
-      transform: translateY(0);
+      transform: translateY(10px);
     }
 
     100% {
-      transform: translateY(-6px);
+      transform: translateY(-10px);
     }
   }
 </style>
 <bea-website-backgroundcircle></bea-website-backgroundcircle>
-<div id="left"></div>
+<div id="left">
+  <div id="text">
+    <span>Béa</span>
+    <span>le don</span>
+    <span>(enfin !)</span>
+    <span>facile</span><span>.</span>
+  </div>
+</div>
 <div id="right">
   <img id="phone" src="node_modules/@bea-org/bea-website-home/phone.svg">
 </div>
-<bea-website-button>Reste informé !</bea-website-button>`;
+<bea-website-button>Reste informé(e) !</bea-website-button>`;
   }
 });

@@ -20,18 +20,39 @@ window.customElements.define('bea-website-main', class extends HTMLElement {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
-  bea-website-menu {
+  bea-website-menu,
+  #header {
     position: absolute;
-    top: 32px;
+    top: 40px;
     left: 80px;
     z-index: 1;
+  }
+
+  #header {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 20px;
+  }
+
+  bea-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  #comingsoon {
+    color: var(--color-blue);
   }
 
   bea-website-home {
     height: 100vh;
   }
 </style>
-<bea-website-menu></bea-website-menu>
+<div id="header">
+  <bea-logo icon></bea-logo>
+  <div id="comingsoon">Coming soon...</div>
+</div>
+<!-- <bea-website-menu></bea-website-menu> -->
 <bea-website-home></bea-website-home>`;
   }
 });
