@@ -65,33 +65,22 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
     height: 100%;
     top: 0;
     left: 0;
-  }
-
-  #focusable:focus {
-    outline: none;
-  }
-
-  :host(:focus-within) slot {
-    outline: 1px dotted;
+    pointer-events: none;
   }
 </style>
 <damo-glslcanvas></damo-glslcanvas>
-<div id="focusable" tabindex="0"></div>
+<a href="javascript:;" id="focusable"></a>
 <slot>Button</slot>
 <!-- <svg width="218" height="84" viewBox="0 0 218 84" xmlns="http://www.w3.org/2000/svg">
   <path
     d="M0 29.9373C0 15.9659 10.6496 4.35013 24.4408 3.27898C80.7305 -1.09299 137.27 -1.09299 193.559 3.27898C207.35 4.35013 218 15.9659 218 29.9372V54.0627C218 68.0341 207.35 79.6499 193.559 80.721C137.27 85.093 80.7305 85.093 24.4408 80.721C10.6496 79.6499 0 68.0341 0 54.0628V29.9373Z" />
 </svg> -->`;
 
+    this._focusable = this.shadowRoot.querySelector('#focusable');
+
     this._pointerPosition = new Vector2();
     this._pointerPositionEased = new Vector2();
     this._pointerHover = 0;
-
-    this.addEventListener('keypress', (event) => {
-      if (event.key === 'Enter') {
-        this.click();
-      }
-    });
 
     this._glslCanvas = this.shadowRoot.querySelector('damo-glslcanvas');
     this._glslCanvas.style.setProperty('--hover-margin', `${HOVER_MARGIN}px`);
@@ -160,6 +149,10 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
       this._pointerPosition.x = (event.clientX - canvasBoundingClientRect.x) / canvasBoundingClientRect.width * 2 - 1;
       this._pointerPosition.y = -((event.clientY - canvasBoundingClientRect.y) / canvasBoundingClientRect.height * 2 - 1);
     });
+  }
+
+  focus() {
+    this._focusable.focus();
   }
 
   update() {

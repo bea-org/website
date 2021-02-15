@@ -1,6 +1,7 @@
 import '../bea-website-backgroundcircle/index.js';
 import '../bea-website-button/index.js';
 import '../bea-website-mailchimpform/index.js';
+import '../bea-icon/index.js';
 
 /**
  * Entry point element
@@ -19,6 +20,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     grid-template-columns: 1fr 1fr;
     line-height: 1;
     font-family: Pangram;
+    perspective: 500px;
   }
 
   bea-website-backgroundcircle {
@@ -97,22 +99,47 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     right: 0;
     width: 560px;
     box-shadow: 40px 30px 30px #6b7f9933;
+    transition-property: transform, opacity, visibility;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0.35, 1.42, 0.54, 0.99);
+    transform-style: preserve-3d;
+    transform-origin: center 25% -250px;
   }
 
-  #emailform #title {
+  #emailform[hidden] {
+    transform: rotateX(-15deg) translateY(50px);
+    opacity: 0;
+    transition-duration: .3s;
+    visibility: hidden;
+    transition-timing-function: ease-in-out;
+  }
+
+  #emailformtitle {
     font-size: 32px;
     color: #001A70;
     font-weight: 700;
   }
 
-  #emailform #closebutton {
+  #emailformclosebutton {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 40px;
+    right: 45px;
     cursor: pointer;
+    color: var(--color-grey);
+    transition-property: transform;
+    transition-duration: .2s;
+    padding: 5px;
   }
 
-  bea-website-button {
+  #emailformclosebutton:hover {
+    transform: rotate(90deg);
+  }
+
+  #emailformclosebutton bea-icon {
+    color: currentColor;
+  }
+
+  #emailformbutton {
     position: absolute;
     font-size: 22px;
     bottom: 40px;
@@ -142,11 +169,24 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
 <div id="right">
   <img id="phone" src="node_modules/@bea-org/bea-website-home/phone.svg">
 </div>
-<bea-website-button>Reste informé(e) !</bea-website-button>
+<bea-website-button id="emailformbutton">Reste informé(e) !</bea-website-button>
 <section id="emailform">
-  <div id="closebutton">X</div>
-  <div id="title">Me tenir informé(e)</div>
+  <div id="emailformtitle">Me tenir informé(e)</div>
   <bea-website-mailchimpform></bea-website-mailchimpform>
+  <a href="javascript:;" id="emailformclosebutton">
+    <bea-icon icon="close"></bea-icon>
+  </a>
 </section>`;
+
+    const emailForm = this.shadowRoot.querySelector('#emailform');
+
+    const emailFormButton = this.shadowRoot.querySelector('#emailformbutton');
+    emailFormButton.addEventListener('click', () => emailForm.hidden = false);
+
+    const closeButton = this.shadowRoot.querySelector('#emailformclosebutton');
+    closeButton.addEventListener('click', () => {
+      emailForm.hidden = true;
+      emailFormButton.focus();
+    });
   }
 });
