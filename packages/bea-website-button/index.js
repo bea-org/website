@@ -20,7 +20,6 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
   :host {
     --background-color: #6091FF;
     font-family: Pangram, sans-serif;
-    font-size: 22px;
     font-weight: 700;
     display: grid;
     align-content: center;
@@ -106,7 +105,7 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
           df -= pointerDistance * .2;
           df -= cos((1. - pointerHover) * (1. - pointerDistance) * 8.) * (1. - pointerHover) * .1 * smoothstep(0., .1, pointerHover);
 
-          float aa = 1. / min(glslCanvasSize.x, glslCanvasSize.y) * 2.;
+          float aa = 1. / min(glslCanvasSize.x, glslCanvasSize.y) * 4.;
           float opacity = 1. - smoothstep(-aa, 0., df);
           fragColor = vec4(color.rgb, opacity * color.a);
           // fragColor = vec4(vec3(df), 1.);

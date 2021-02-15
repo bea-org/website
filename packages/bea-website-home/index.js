@@ -1,5 +1,6 @@
 import '../bea-website-backgroundcircle/index.js';
 import '../bea-website-button/index.js';
+import '../bea-website-mailchimpform/index.js';
 
 /**
  * Entry point element
@@ -64,11 +65,13 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     white-space: nowrap;
   }
 
-  #text span:nth-of-type(2), #text span:nth-of-type(3) {
+  #text span:nth-of-type(2),
+  #text span:nth-of-type(3) {
     display: block;
   }
 
-  #text span:nth-of-type(2), #text span:nth-of-type(4) {
+  #text span:nth-of-type(2),
+  #text span:nth-of-type(4) {
     color: var(--color-darkblue);
   }
 
@@ -81,8 +84,36 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     color: var(--color-blue);
   }
 
+  #emailform {
+    display: grid;
+    background-color: var(--color-ivory);
+    border-radius: 25px;
+    padding: 50px 45px;
+    gap: 45px;
+    position: absolute;
+    bottom: 25px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 560px;
+  }
+
+  #emailform #title {
+    font-size: 32px;
+    color: #001A70;
+    font-weight: 700;
+  }
+
+  #emailform #closebutton {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+  }
+
   bea-website-button {
     position: absolute;
+    font-size: 22px;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
@@ -110,6 +141,11 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
 <div id="right">
   <img id="phone" src="node_modules/@bea-org/bea-website-home/phone.svg">
 </div>
-<bea-website-button>Reste informé(e) !</bea-website-button>`;
+<bea-website-button>Reste informé(e) !</bea-website-button>
+<section id="emailform">
+  <div id="closebutton">X</div>
+  <div id="title">Me tenir informé(e)</div>
+  <bea-website-mailchimpform></bea-website-mailchimpform>
+</section>`;
   }
 });
