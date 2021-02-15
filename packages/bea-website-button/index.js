@@ -58,8 +58,25 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
     display: block;
     pointer-events: none;
   }
+
+  #focusable {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  #focusable:focus {
+    outline: none;
+  }
+
+  :host(:focus-within) slot {
+    outline: 1px dotted;
+  }
 </style>
 <damo-glslcanvas></damo-glslcanvas>
+<div id="focusable" tabindex="0"></div>
 <slot>Button</slot>
 <!-- <svg width="218" height="84" viewBox="0 0 218 84" xmlns="http://www.w3.org/2000/svg">
   <path
@@ -69,6 +86,12 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
     this._pointerPosition = new Vector2();
     this._pointerPositionEased = new Vector2();
     this._pointerHover = 0;
+
+    this.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        this.click();
+      }
+    });
 
     this._glslCanvas = this.shadowRoot.querySelector('damo-glslcanvas');
     this._glslCanvas.style.setProperty('--hover-margin', `${HOVER_MARGIN}px`);
