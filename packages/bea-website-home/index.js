@@ -44,7 +44,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   }
 
   #phone {
-    filter: drop-shadow(38.6px 28.95px 28.95px #6B7F9933);
+    filter: drop-shadow(40px 30px 30px #6B7F9933);
     animation-duration: 3s;
     animation-name: float;
     animation-iteration-count: infinite;
@@ -96,6 +96,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     left: 0;
     right: 0;
     width: 560px;
+    box-shadow: 40px 30px 30px #6b7f9933;
   }
 
   #emailform #title {
