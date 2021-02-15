@@ -99,6 +99,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     right: 0;
     width: 560px;
     box-shadow: 40px 30px 30px #6b7f9933;
+    will-change: transform, opacity, visibility;
     transition-property: transform, opacity, visibility;
     transition-duration: .5s;
     transition-timing-function: cubic-bezier(0.35, 1.42, 0.54, 0.99);
@@ -170,7 +171,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   <img id="phone" src="node_modules/@bea-org/bea-website-home/phone.svg">
 </div>
 <bea-website-button id="emailformbutton">Reste informé(e) !</bea-website-button>
-<section id="emailform">
+<section id="emailform" hidden>
   <div id="emailformtitle">Me tenir informé(e)</div>
   <bea-website-mailchimpform></bea-website-mailchimpform>
   <a href="javascript:;" id="emailformclosebutton">

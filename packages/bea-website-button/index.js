@@ -2,6 +2,7 @@ import AnimationTickerElement from '../../@damienmortini/element-animation-ticke
 import '../../@damienmortini/element-glslcanvas/index.js';
 import Color from '../../@damienmortini/core/math/Color.js';
 import Vector2 from '../../@damienmortini/core/math/Vector2.js';
+import Easing from '../../@damienmortini/core/math/Easing.js';
 import { animate } from '../../@damienmortini/core/util/Animation.js';
 
 const HOVER_MARGIN = 100;
@@ -132,11 +133,13 @@ window.customElements.define('bea-website-button', class extends AnimationTicker
 
     this._pointerHovering = false;
     this.addEventListener('pointerenter', (event) => {
+      canvasBoundingClientRect = this._glslCanvas.getBoundingClientRect();
       this._pointerHovering = true;
       animate(this, {
         _pointerHover: 1,
       }, {
-        duration: 500,
+        duration: 600,
+        easing: (x) => Easing.powerInOut(x),
       });
     });
 
