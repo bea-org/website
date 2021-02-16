@@ -12,7 +12,7 @@
   "author": "Damien Mortini",
   "workspaces": [
     "packages/*",
-    "../library/packages/**/*",
+    "../bea/packages/**/*",
     "../../@damienmortini/lib/packages/**/*"
   ],
   "devDependencies": {
