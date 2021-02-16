@@ -60,7 +60,14 @@ window.customElements.define('bea-website-mailchimpform', class extends HTMLElem
     const form = this.shadowRoot.querySelector('form');
 
     submitButton.addEventListener('click', () => {
+      this.dispatchEvent(new Event('submit', {
+        bubbles: true,
+      }));
       form.submit();
+    });
+
+    form.addEventListener('submit', (event) => {
+      this.dispatchEvent(new Event('submit', event));
     });
   }
 });

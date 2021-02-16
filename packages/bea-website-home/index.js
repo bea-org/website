@@ -86,7 +86,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     color: var(--color-blue);
   }
 
-  #emailform {
+  #emailformpopup {
     display: grid;
     background-color: var(--color-ivory);
     border-radius: 25px;
@@ -107,7 +107,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     transform-origin: center 25% -250px;
   }
 
-  #emailform[hidden] {
+  #emailformpopup[hidden] {
     transform: rotateX(-15deg) translateY(50px);
     opacity: 0;
     transition-duration: .3s;
@@ -171,7 +171,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   <img id="phone" src="node_modules/@bea-org/bea-website-home/phone.svg">
 </div>
 <bea-website-button id="emailformbutton">Reste informé(e) !</bea-website-button>
-<section id="emailform" hidden>
+<section id="emailformpopup" hidden>
   <div id="emailformtitle">Me tenir informé(e)</div>
   <bea-website-mailchimpform></bea-website-mailchimpform>
   <a href="javascript:;" id="emailformclosebutton">
@@ -179,15 +179,16 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   </a>
 </section>`;
 
-    const emailForm = this.shadowRoot.querySelector('#emailform');
+    const emailFormPopup = this.shadowRoot.querySelector('#emailformpopup');
 
     const emailFormButton = this.shadowRoot.querySelector('#emailformbutton');
-    emailFormButton.addEventListener('click', () => emailForm.hidden = false);
+    emailFormButton.addEventListener('click', () => {
+      emailFormPopup.hidden = false;
+    });
 
     const closeButton = this.shadowRoot.querySelector('#emailformclosebutton');
-    closeButton.addEventListener('click', () => {
-      emailForm.hidden = true;
-      emailFormButton.focus();
-    });
+    closeButton.addEventListener('click', () => emailFormPopup.hidden = true);
+
+    emailFormPopup.addEventListener('submit', () => emailFormPopup.hidden = true);
   }
 });
