@@ -1,3 +1,5 @@
+import '../bea-font/index.js';
+
 import '../bea-website-menu/index.js';
 import '../bea-website-home/index.js';
 
@@ -12,6 +14,8 @@ window.customElements.define('bea-website-main', class extends HTMLElement {
     super();
 
     this.attachShadow({ mode: 'open' }).innerHTML = `<style>
+  @import "./node_modules/@bea-org/bea-color/index.css";
+
   :host {
     display: block;
     position: relative;

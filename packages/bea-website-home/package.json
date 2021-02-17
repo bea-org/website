@@ -1,5 +1,8 @@
 {
   "name": "@bea-org/bea-website-home",
   "private": true,
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "dependencies": {
+    "@bea-org/bea-icon": "^0.0.2"
+  }
 }

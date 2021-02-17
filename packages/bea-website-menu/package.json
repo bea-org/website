@@ -1,5 +1,9 @@
 {
   "name": "@bea-org/bea-website-menu",
   "private": true,
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "dependencies": {
+    "@bea-org/bea-a": "^0.0.2",
+    "@bea-org/bea-logo": "^0.0.2"
+  }
 }

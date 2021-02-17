@@ -28,6 +28,11 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.11.tgz#9ce3595bcd74bc5c466905e86c535b8b25011e79"
   integrity sha512-N3UxG+uuF4CMYoNj8AhnbAcJF0PiuJ9KHuy1lQmkYsxTer/MAH9UBNHsBoAX/4s6NvlDD047No8mYVGGzLL4hg==
 
+"@bea-org/bea-color@^0.0.2":
+  version "0.0.2"
+  resolved "https://npm.pkg.github.com/download/@bea-org/bea-color/0.0.2/b384aad585370034f448eb7fe18950035f78fc344a5287f69b0c7c656ac0dc5f#0111d6c949fdbd5a248bec879d8cfc3ed84dac25"
+  integrity sha512-ELHB3AG8DPCat+MJ41Gbza0R04tI+gzfrvUPjF/sTEn3oE11JCce2ZGJx2QpeiR97KRaV+ygPP/bqyqvxj859A==
+
 "@damienmortini/element-glslcanvas@^0.0.1":
   version "0.0.1"
   resolved "https://npm.pkg.github.com/download/@damienmortini/element-glslcanvas/0.0.1/1a5ba35871c977c20e3954ca35eb83036a0aecc512c52e7595f9f1877917edec#54fd9943dc6ff80f098d68c42291cb9c585b02b5"
