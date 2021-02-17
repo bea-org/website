@@ -28,18 +28,18 @@ window.customElements.define('bea-website-mailchimpform', class extends HTMLElem
     font-size: 16px;
     border: none;
     border-radius: 100px;
-    color: var(--color-black);
+    color: var(--bea-color-black);
     box-sizing: border-box;
   }
   
   input::placeholder {
-    color: var(--color-black);
+    color: var(--bea-color-black);
     opacity: .3;
   }
 
   input:focus {
     outline: none;
-    box-shadow: inset 0 0 0 1px var(--color-grey);
+    box-shadow: inset 0 0 0 1px var(--bea-color-grey);
   }
 
   bea-website-button {

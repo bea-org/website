@@ -41,7 +41,7 @@ window.customElements.define('bea-website-main', class extends HTMLElement {
   }
 
   #comingsoon {
-    color: var(--color-blue);
+    color: var(--bea-color-blue);
   }
 
   bea-website-home {

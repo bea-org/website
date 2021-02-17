@@ -55,7 +55,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
   }
 
   #left {
-    color: var(--color-blue);
+    color: var(--bea-color-blue);
     display: grid;
     align-items: center;
     justify-items: center;
@@ -74,21 +74,21 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
 
   #text span:nth-of-type(2),
   #text span:nth-of-type(4) {
-    color: var(--color-darkblue);
+    color: var(--bea-color-darkblue);
   }
 
   #text span:nth-of-type(3) {
-    color: var(--color-green);
+    color: var(--bea-color-green);
   }
 
   #text span:nth-of-type(5) {
     display: inline;
-    color: var(--color-blue);
+    color: var(--bea-color-blue);
   }
 
   #emailformpopup {
     display: grid;
-    background-color: var(--color-ivory);
+    background-color: var(--bea-color-ivory);
     border-radius: 25px;
     padding: 50px 45px;
     gap: 45px;
@@ -126,7 +126,7 @@ window.customElements.define('bea-website-home', class extends HTMLElement {
     top: 40px;
     right: 45px;
     cursor: pointer;
-    color: var(--color-grey);
+    color: var(--bea-color-grey);
     transition-property: transform;
     transition-duration: .2s;
     padding: 5px;
