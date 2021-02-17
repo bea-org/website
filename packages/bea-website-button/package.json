@@ -5,6 +5,6 @@
   "dependencies": {
     "@damienmortini/core": "^0.2.90",
     "@damienmortini/element-animation-ticker": "^0.0.88",
-    "@damienmortini/element-glslcanvas": "^0.0.1"
+    "@damienmortini/element-glslcanvas": "^0.0.6"
   }
 }
